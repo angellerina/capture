@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   const [faqToggle, setFaqToggle] = useState(false);
@@ -11,9 +12,8 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <Toggle>
-        <div className="question">
-          <h4>How Do I Start?</h4>
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
           <div className="answer">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
@@ -26,20 +26,15 @@ const FaqSection = () => {
               officia?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-        <div className="question">
-          <h4>Daily Schedule</h4>
+        </Toggle>
+        <Toggle title="Daily Schedule">
           <div className="answer">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. E</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-        <div className="question">
-          <h4>Different Payment Methods</h4>
+        </Toggle>
+
+        <Toggle title="Different Payment Methods">
           <div className="answer">
             <p>
               Deserunt itaque labore, sunt enim eveniet ratione consectetur
@@ -52,12 +47,9 @@ const FaqSection = () => {
               atque ab modi nihil aspernatur?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-        <div className="question">
-          <h4>What Products Do You Offer?</h4>
+        </Toggle>
+
+        <Toggle title="What Products Do You Offer?">
           <div className="answer">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
@@ -72,9 +64,8 @@ const FaqSection = () => {
               atque ab modi nihil aspernatur?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
