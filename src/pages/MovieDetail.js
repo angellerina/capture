@@ -55,7 +55,6 @@ const MovieDetail = () => {
 const Details = styled(motion.div)`
   color: white;
 `;
-
 const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
@@ -72,16 +71,18 @@ const HeadLine = styled.div`
     object-fit: cover;
   }
 `;
-
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
-
-const StyledAward = styled.div`
+const AwardStyle = styled.div`
   padding: 5rem;
   h3 {
     font-size: 2rem;
@@ -96,7 +97,6 @@ const StyledAward = styled.div`
     padding: 2rem 0rem;
   }
 `;
-
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {
@@ -109,11 +109,11 @@ const ImageDisplay = styled.div`
 //Award Component
 const Award = ({ title, description }) => {
   return (
-    <StyledAward>
+    <AwardStyle>
       <h3>{title}</h3>
       <div className="line"></div>
       <p>{description}</p>
-    </StyledAward>
+    </AwardStyle>
   );
 };
 
