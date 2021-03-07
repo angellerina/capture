@@ -73,6 +73,12 @@ const FaqSection = () => {
           </div>
         </Toggle>
       </AnimateSharedLayout>
+      <small>
+        Made with ❤ by
+        <a add target="_blank" href="https://rina-portfolio.netlify.app/">
+          RINA
+        </a>
+      </small>
     </Faq>
   );
 };
@@ -100,6 +106,18 @@ const Faq = styled(About)`
     padding: 2rem 0rem;
     p {
       padding: 1rem 0rem;
+    }
+  }
+  small {
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: unset;
+      padding: 0 5px;
+      color: #23d997;
+      text-decoration: none;
+      text-align: center;
+      line-height: 16px;
     }
   }
 `;
